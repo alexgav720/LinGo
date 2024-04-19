@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.levelChoseButton5 = new LinGo.LevelChoseButton();
             this.levelChoseButton4 = new LinGo.LevelChoseButton();
             this.levelChoseButton3 = new LinGo.LevelChoseButton();
@@ -45,13 +45,11 @@
             this.levelChoseButton2 = new LinGo.LevelChoseButton();
             this.levelChoseButton1 = new LinGo.LevelChoseButton();
             this.roundedButton1 = new LinGo.RoundedButton();
-            this.roundedButton2 = new LinGo.RoundedButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +68,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(161)))));
-            this.panel3.Controls.Add(this.roundedButton2);
             this.panel3.Controls.Add(this.tabControl1);
             this.panel3.Controls.Add(this.roundedButton1);
             this.panel3.Controls.Add(this.label1);
@@ -91,45 +88,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(781, 656);
             this.tabControl1.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.levelChoseButton5);
-            this.tabPage1.Controls.Add(this.levelChoseButton4);
-            this.tabPage1.Controls.Add(this.levelChoseButton3);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.roundedPanel1);
-            this.tabPage1.Controls.Add(this.levelChoseButton2);
-            this.tabPage1.Controls.Add(this.levelChoseButton1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 8);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(773, 644);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(151, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(477, 68);
-            this.panel1.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(64, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(353, 48);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Модуль 1: Начало";
             // 
             // tabPage2
             // 
@@ -153,6 +111,44 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "профиль TODO";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(160, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(477, 68);
+            this.panel1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(64, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(353, 48);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Модуль 1: Начало";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AutoScroll = true;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.levelChoseButton5);
+            this.tabPage1.Controls.Add(this.levelChoseButton4);
+            this.tabPage1.Controls.Add(this.levelChoseButton3);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.roundedPanel1);
+            this.tabPage1.Controls.Add(this.levelChoseButton2);
+            this.tabPage1.Controls.Add(this.levelChoseButton1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 8);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(773, 644);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // levelChoseButton5
             // 
             this.levelChoseButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(204)))), ((int)(((byte)(2)))));
@@ -161,7 +157,7 @@
             this.levelChoseButton5.FlatAppearance.BorderSize = 0;
             this.levelChoseButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.levelChoseButton5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F);
-            this.levelChoseButton5.Location = new System.Drawing.Point(253, 693);
+            this.levelChoseButton5.Location = new System.Drawing.Point(290, 667);
             this.levelChoseButton5.Name = "levelChoseButton5";
             this.levelChoseButton5.PathLevel = 5;
             this.levelChoseButton5.Size = new System.Drawing.Size(100, 76);
@@ -177,13 +173,14 @@
             this.levelChoseButton4.FlatAppearance.BorderSize = 0;
             this.levelChoseButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.levelChoseButton4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F);
-            this.levelChoseButton4.Location = new System.Drawing.Point(419, 603);
+            this.levelChoseButton4.Location = new System.Drawing.Point(456, 577);
             this.levelChoseButton4.Name = "levelChoseButton4";
             this.levelChoseButton4.PathLevel = 4;
             this.levelChoseButton4.Size = new System.Drawing.Size(100, 76);
             this.levelChoseButton4.TabIndex = 10;
             this.levelChoseButton4.Text = "4";
             this.levelChoseButton4.UseVisualStyleBackColor = false;
+            this.levelChoseButton4.Click += new System.EventHandler(this.btn_Click);
             // 
             // levelChoseButton3
             // 
@@ -193,7 +190,7 @@
             this.levelChoseButton3.FlatAppearance.BorderSize = 0;
             this.levelChoseButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.levelChoseButton3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F);
-            this.levelChoseButton3.Location = new System.Drawing.Point(253, 510);
+            this.levelChoseButton3.Location = new System.Drawing.Point(290, 484);
             this.levelChoseButton3.Name = "levelChoseButton3";
             this.levelChoseButton3.PathLevel = 3;
             this.levelChoseButton3.Size = new System.Drawing.Size(100, 76);
@@ -208,7 +205,7 @@
             this.roundedPanel1.Color = System.Drawing.Color.WhiteSmoke;
             this.roundedPanel1.Controls.Add(this.label3);
             this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Location = new System.Drawing.Point(96, 162);
+            this.roundedPanel1.Location = new System.Drawing.Point(105, 162);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(580, 100);
             this.roundedPanel1.TabIndex = 6;
@@ -243,7 +240,7 @@
             this.levelChoseButton2.FlatAppearance.BorderSize = 0;
             this.levelChoseButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.levelChoseButton2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F);
-            this.levelChoseButton2.Location = new System.Drawing.Point(402, 391);
+            this.levelChoseButton2.Location = new System.Drawing.Point(439, 390);
             this.levelChoseButton2.Name = "levelChoseButton2";
             this.levelChoseButton2.PathLevel = 2;
             this.levelChoseButton2.Size = new System.Drawing.Size(100, 76);
@@ -260,7 +257,7 @@
             this.levelChoseButton1.FlatAppearance.BorderSize = 0;
             this.levelChoseButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.levelChoseButton1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.levelChoseButton1.Location = new System.Drawing.Point(253, 307);
+            this.levelChoseButton1.Location = new System.Drawing.Point(290, 306);
             this.levelChoseButton1.Name = "levelChoseButton1";
             this.levelChoseButton1.PathLevel = 1;
             this.levelChoseButton1.Size = new System.Drawing.Size(100, 80);
@@ -287,35 +284,6 @@
             this.roundedButton1.UseVisualStyleBackColor = false;
             this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
-            // roundedButton2
-            // 
-            this.roundedButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(244)))), ((int)(((byte)(255)))));
-            this.roundedButton2.ButtonRoundRadius = 50;
-            this.roundedButton2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(206)))), ((int)(((byte)(161)))));
-            this.roundedButton2.FlatAppearance.BorderSize = 0;
-            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton2.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.roundedButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(176)))), ((int)(((byte)(246)))));
-            this.roundedButton2.Location = new System.Drawing.Point(9, 206);
-            this.roundedButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(206, 64);
-            this.roundedButton2.TabIndex = 5;
-            this.roundedButton2.Text = "Профиль";
-            this.roundedButton2.UseVisualStyleBackColor = false;
-            this.roundedButton2.Visible = false;
-            this.roundedButton2.Click += new System.EventHandler(this.roundedButton2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(65, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 124);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,20 +291,19 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1008, 641);
             this.Controls.Add(this.panel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "LinGo";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -349,21 +316,19 @@
         private System.Windows.Forms.Panel panel3;
         private RoundedButton roundedButton1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage1;
+        private LevelChoseButton levelChoseButton5;
+        private LevelChoseButton levelChoseButton4;
+        private LevelChoseButton levelChoseButton3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
         private RoundedPanel roundedPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private LevelChoseButton levelChoseButton2;
         private LevelChoseButton levelChoseButton1;
-        private RoundedButton roundedButton2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private LevelChoseButton levelChoseButton5;
-        private LevelChoseButton levelChoseButton4;
-        private LevelChoseButton levelChoseButton3;
-        private System.Windows.Forms.Button button1;
     }
 }
 

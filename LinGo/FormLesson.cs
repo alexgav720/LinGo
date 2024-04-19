@@ -19,7 +19,7 @@ namespace LinGo
         Random random;
         int rightAnswer = 0;
         int wrongAnswer = 0;
-        List<Exercise> lesson;
+        List<Exercise> lessons;
         string currentType = "";
         string rightText;
         string curentText;
@@ -28,55 +28,21 @@ namespace LinGo
         public FormLesson(FileInfo file)
         {
             InitializeComponent();
+            random = new Random();
             reader = new StreamReader(file.FullName);
             string les = reader.ReadToEnd();
             reader.Close();
-            this.lesson = JsonSerializer.Deserialize<List<Exercise>>(les);
-            random = new Random();
-            linearProgressBar1.ValueMaximum = lesson.Count;
-            getExercise();
+            lessons = JsonSerializer.Deserialize<List<Exercise>>(les);
         }
 
-        //генерация упражнения
-        private void getExercise()
+        private void FormLesson_Load(object sender, EventArgs e)
         {
-            SentensesPanel.Visible = false;
-            WordsPanel.Visible = false;
-            ComparisonPanel.Visible = false;
-
-            currentType = lesson[0].type;
-            switch (currentType)
-            {
-                case "Sentenses":
-                    SentensesPanel.Visible = true;
-                    GetSentenceWord(lesson[0]);
-                    break;
-                case "Words":
-                    WordsPanel.Visible = true;
-                    GetWords(lesson[0]);
-                    break;
-                case "Comparison":
-                    ComparisonPanel.Visible = true;
-                    GetComparisonWord(lesson[0]);
-                    break;
-            }
-            lesson.RemoveAt(0);
+            linearProgressBar1.ValueMaximum = lessons.Count;
+            getExercise(lessons[0]);
         }
 
-        #region Sentences ex
-        //создание кнопок со словами
-        private void GetSentenceWord(Exercise ex)
+        private void Shuffle(ref List<string> data)
         {
-
-            rightText = ex.words.Split('/')[0];
-            label1.Text = ex.words.Split('/')[1];
-            RightAnswerLabel.Text = rightText;
-
-
-            List<string> data = rightText.Split(' ').ToList();
-            data.AddRange(ex.trash);
-
-
             for (int i = data.Count - 1; i >= 1; i--)
             {
                 int j = random.Next(i + 1);
@@ -85,6 +51,47 @@ namespace LinGo
                 data[j] = data[i];
                 data[i] = temp;
             }
+        }
+
+        //генерация упражнения
+        private void getExercise(Exercise exerсise)
+        {
+
+
+            SentensesPanel.Visible = false;
+            WordsPanel.Visible = false;
+            ComparisonPanel.Visible = false;
+
+            currentType = exerсise.type;
+            switch (currentType)
+            {
+                case "Sentences":
+                    SentensesPanel.Visible = true;
+                    GetSentenceWord(exerсise);
+                    break;
+                case "Words":
+                    WordsPanel.Visible = true;
+                    GetWords(exerсise);
+                    break;
+                case "Comparison":
+                    ComparisonPanel.Visible = true;
+                    GetComparisonWord(exerсise);
+                    break;
+            }
+        }
+
+        #region Sentences ex
+        //создание кнопок со словами
+        private void GetSentenceWord(Exercise ex)
+        {
+            label1.Text = ex.words.Split('/')[0];
+            rightText = ex.words.Split('/')[1];
+            RightAnswerLabel.Text = rightText;
+
+
+            List<string> data = rightText.Split(' ').ToList();
+            data.AddRange(ex.trash);
+            Shuffle(ref data);
 
             foreach (string word in data)
             {
@@ -107,11 +114,12 @@ namespace LinGo
         //нажатие на слово в панели
         private void wordClick(object sender, EventArgs e)
         {
-            if (ChoiseflowLayoutPanel.Contains((RoundedButton)sender))
+            RoundedButton btn = (RoundedButton)sender;
+            if (btn.Parent == ChoiseflowLayoutPanel)
             {
                 InspectflowLayoutPanel.Controls.Add((RoundedButton)sender);
             }
-            else if (InspectflowLayoutPanel.Contains((RoundedButton)sender))
+            else if (btn.Parent == InspectflowLayoutPanel)
             {
                 ChoiseflowLayoutPanel.Controls.Add((RoundedButton)sender);
             }
@@ -139,8 +147,8 @@ namespace LinGo
 
         private void GetWords(Exercise ex)
         {
-            rightText = ex.words.Split('/')[0];
-            WordsLabelHead.Text = ex.words.Split('/')[1];
+            WordsLabelHead.Text = ex.words.Split('/')[0];
+            rightText = ex.words.Split('/')[1];
             RightAnswerLabel.Text = rightText;
 
             List<string> data = new List<string> {
@@ -148,14 +156,13 @@ namespace LinGo
                 ex.trash[random.Next(0,ex.trash.Count)],
                 ex.trash[random.Next(0,ex.trash.Count)] };
 
-            for (int i = data.Count - 1; i >= 1; i--)
-            {
-                int j = random.Next(i + 1);
+            Shuffle(ref data);
 
-                var temp = data[j];
-                data[j] = data[i];
-                data[i] = temp;
-            }
+
+            WordsBtn1.Enabled = true;
+            WordsBtn2.Enabled = true;
+            WordsBtn3.Enabled = true;
+
             WordsBtn1.Text = data[0];
             WordsBtn2.Text = data[1];
             WordsBtn3.Text = data[2];
@@ -183,6 +190,10 @@ namespace LinGo
 
         private bool CheckWords()
         {
+
+            WordsBtn1.Enabled= false;
+            WordsBtn2.Enabled = false;
+            WordsBtn3.Enabled= false;
             if (curentText == rightText)
             {
                 return true;
@@ -198,7 +209,7 @@ namespace LinGo
 
         private void GetComparisonWord(Exercise ex)
         {
-            buttonCheck.Enabled= false;
+            buttonCheck.Enabled = false;
 
             List<string> words1 = ex.words.Split('/')[0].Split(' ').ToList();
             List<string> words2 = ex.words.Split('/')[1].Split(' ').ToList();
@@ -210,29 +221,15 @@ namespace LinGo
 
             RightAnswerLabel.Text = "";
 
-            for (int i = words1.Count - 1; i >= 1; i--)
-            {
-                int j = random.Next(i + 1);
+            Shuffle(ref words1);
+            Shuffle(ref words2);
 
-                var temp = words1[j];
-                words1[j] = words1[i];
-                words1[i] = temp;
-            }
-
-            for (int i = words2.Count - 1; i >= 1; i--)
-            {
-                int j = random.Next(i + 1);
-
-                var temp = words2[j];
-                words2[j] = words2[i];
-                words2[i] = temp;
-            }
 
             foreach (string word in words1)
             {
                 RoundedButton btn = new RoundedButton();
                 btn.Text = word;
-                btn.AutoSize = true;
+                btn.Width = 80;
                 btn.Height = 40;
                 btn.Color = Color.LightGray;
                 btn.ButtonRoundRadius = 10;
@@ -271,7 +268,13 @@ namespace LinGo
 
             if (comparisonCurrentWord == null)
             {
-                if (btn.Parent == ComparisonFlPanel2) { return; }
+                if (btn.Parent == ComparisonFlPanel2)
+                {
+                    btn.BackColor = Color.White;
+                    btn.Color = Color.FromArgb(229, 229, 229);
+                    btn.ForeColor = Color.Black;
+                    return;
+                }
                 comparisonCurrentWord = btn;
                 return;
             }
@@ -301,11 +304,11 @@ namespace LinGo
             }
             comparisonCurrentWord = null;
 
-            foreach(RoundedButton rbtn in ComparisonFlPanel1.Controls)
+            foreach (RoundedButton rbtn in ComparisonFlPanel1.Controls)
             {
                 if (rbtn.Enabled == true) { return; }
             }
-                 buttonCheck.Enabled= true;
+            buttonCheck.Enabled = true;
         }
 
         private bool CheckComparison(string text)
@@ -326,7 +329,7 @@ namespace LinGo
             bool isRightAnswer = false;
             switch (currentType)
             {
-                case "Sentenses":
+                case "Sentences":
                     isRightAnswer = CheckSentense();
                     break;
                 case "Words":
@@ -365,7 +368,8 @@ namespace LinGo
         // кнопка далее
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            if (lesson.Count == 0)
+            lessons.RemoveAt(0);
+            if (lessons.Count == 0)
             {
                 FinishPanel.Visible = true;
                 RightLabel.Text = rightAnswer.ToString();
@@ -382,12 +386,15 @@ namespace LinGo
             ComparisonFlPanel1.Controls.Clear();
             ComparisonFlPanel2.Controls.Clear();
             NextBtn.Enabled = false;
-            getExercise();
+            if (lessons.Count <= 0)
+            {
+                return;
+            }
+            getExercise(lessons[0]);
         }
 
         private void ToMainBtn_Click(object sender, EventArgs e)
         {
-
             this.Close();
         }
 

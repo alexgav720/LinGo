@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SentensesPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.ComparisonPanel = new System.Windows.Forms.Panel();
             this.ComparisonFlPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.ComparisonFlPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -67,20 +68,20 @@
             this.ChoiseflowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.ChoiseflowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ChoiseflowLayoutPanel.ForeColor = System.Drawing.Color.Black;
-            this.ChoiseflowLayoutPanel.Location = new System.Drawing.Point(173, 244);
+            this.ChoiseflowLayoutPanel.Location = new System.Drawing.Point(173, 274);
             this.ChoiseflowLayoutPanel.Name = "ChoiseflowLayoutPanel";
             this.ChoiseflowLayoutPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.ChoiseflowLayoutPanel.Size = new System.Drawing.Size(564, 160);
+            this.ChoiseflowLayoutPanel.Size = new System.Drawing.Size(564, 130);
             this.ChoiseflowLayoutPanel.TabIndex = 3;
             // 
             // InspectflowLayoutPanel
             // 
             this.InspectflowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.InspectflowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InspectflowLayoutPanel.Location = new System.Drawing.Point(173, 54);
+            this.InspectflowLayoutPanel.Location = new System.Drawing.Point(173, 115);
             this.InspectflowLayoutPanel.Name = "InspectflowLayoutPanel";
             this.InspectflowLayoutPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.InspectflowLayoutPanel.Size = new System.Drawing.Size(564, 157);
+            this.InspectflowLayoutPanel.Size = new System.Drawing.Size(564, 132);
             this.InspectflowLayoutPanel.TabIndex = 4;
             // 
             // buttonCheck
@@ -101,7 +102,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 10);
+            this.label1.Location = new System.Drawing.Point(219, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 30);
             this.label1.TabIndex = 7;
@@ -245,7 +246,6 @@
             this.FinishPanel.Controls.Add(this.label5);
             this.FinishPanel.Controls.Add(this.label4);
             this.FinishPanel.Controls.Add(this.label3);
-            this.FinishPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FinishPanel.Location = new System.Drawing.Point(0, 0);
             this.FinishPanel.Name = "FinishPanel";
             this.FinishPanel.Size = new System.Drawing.Size(1008, 641);
@@ -317,6 +317,7 @@
             // SentensesPanel
             // 
             this.SentensesPanel.BackColor = System.Drawing.Color.Transparent;
+            this.SentensesPanel.Controls.Add(this.label6);
             this.SentensesPanel.Controls.Add(this.label1);
             this.SentensesPanel.Controls.Add(this.InspectflowLayoutPanel);
             this.SentensesPanel.Controls.Add(this.ChoiseflowLayoutPanel);
@@ -324,6 +325,16 @@
             this.SentensesPanel.Name = "SentensesPanel";
             this.SentensesPanel.Size = new System.Drawing.Size(935, 423);
             this.SentensesPanel.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(217, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(323, 30);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Переведите предложение";
             // 
             // ComparisonPanel
             // 
@@ -385,14 +396,15 @@
             this.Controls.Add(this.FinishPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linearProgressBar1);
+            this.Controls.Add(this.SentensesPanel);
             this.Controls.Add(this.ComparisonPanel);
             this.Controls.Add(this.WordsPanel);
-            this.Controls.Add(this.SentensesPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormLesson";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLesson";
+            this.Text = "Lesson";
+            this.Load += new System.EventHandler(this.FormLesson_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.WordsPanel.ResumeLayout(false);
@@ -435,5 +447,6 @@
         private System.Windows.Forms.Label ComparisonLabel;
         private System.Windows.Forms.FlowLayoutPanel ComparisonFlPanel2;
         private System.Windows.Forms.FlowLayoutPanel ComparisonFlPanel1;
+        private System.Windows.Forms.Label label6;
     }
 }

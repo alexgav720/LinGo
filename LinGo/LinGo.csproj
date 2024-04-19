@@ -92,7 +92,6 @@
     <Compile Include="FormLesson.Designer.cs">
       <DependentUpon>FormLesson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lesson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundedButton.cs">

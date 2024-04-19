@@ -29,3 +29,34 @@ D:\project\C#\LinGo\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\project\C#\LinGo\bin\Debug\System.ValueTuple.xml
 D:\project\C#\LinGo\obj\Debug\LinGo.csproj.CopyComplete
 D:\project\C#\LinGo\obj\Debug\LinGo.MainForm.resources
+D:\project\C#\for git\LinGo\bin\Debug\LinGo.exe.config
+D:\project\C#\for git\LinGo\bin\Debug\LinGo.exe
+D:\project\C#\for git\LinGo\bin\Debug\LinGo.pdb
+D:\project\C#\for git\LinGo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Buffers.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Memory.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Numerics.Vectors.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Text.Encodings.Web.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Text.Json.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\project\C#\for git\LinGo\bin\Debug\System.ValueTuple.dll
+D:\project\C#\for git\LinGo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Buffers.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Memory.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Numerics.Vectors.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Text.Encodings.Web.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Text.Json.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\project\C#\for git\LinGo\bin\Debug\System.ValueTuple.xml
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.csproj.AssemblyReference.cache
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.csproj.SuggestedBindingRedirects.cache
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.MainForm.resources
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.FormLesson.resources
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.Properties.Resources.resources
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.csproj.GenerateResource.cache
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.csproj.CoreCompileInputs.cache
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.csproj.CopyComplete
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.exe
+D:\project\C#\for git\LinGo\obj\Debug\LinGo.pdb
